@@ -1,0 +1,6 @@
+sceneSetups:
+- path: /Users/cole.c879/Desktop/Game Dev/ALC-Game-Dev./Movement stuff/Assets/Scenes/Prototype
+    1.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
