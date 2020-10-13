@@ -241,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425805626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34, y: 0.6, z: 9.46}
+  m_LocalPosition: {x: 34, y: 0.73, z: 9.49}
   m_LocalScale: {x: 1.95514, y: 1.2799324, z: 4.88785}
   m_Children: []
   m_Father: {fileID: 992285706}
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bacon: 0
-  speed: -0.3
+  speed: 0
 --- !u!23 &475985836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -730,6 +730,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b6675de545141649953fd8adec4561b, type: 3}
+--- !u!1 &2104153510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104153511}
+  - component: {fileID: 2104153512}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Respawn
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104153511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104153510}
+  m_LocalRotation: {x: 0, y: 0.008726558, z: 0, w: 0.999962}
+  m_LocalPosition: {x: 1, y: -1, z: 35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
+--- !u!114 &2104153512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104153510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99427be4b385d4af8be10a1d92dff514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalPrefabs:
+  - {fileID: 6924136911686249542, guid: d56657232f19f4aa6894506ea9e2f3d0, type: 3}
+  - {fileID: 4968444963644248863, guid: 8d6df5a6b6e8f41c0ae38bbe13cf0074, type: 3}
+  - {fileID: 5218017052389290510, guid: 98fbb3044570441cf93916314e27396c, type: 3}
+  - {fileID: 3297684811120812989, guid: f7ca8315460e9405a9673ec55944b9d4, type: 3}
+  - {fileID: 5705368083703547854, guid: 4d613caa35dd44bb69785e79fb108ded, type: 3}
 --- !u!1001 &3297684812645212440
 PrefabInstance:
   m_ObjectHideFlags: 0

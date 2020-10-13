@@ -7,12 +7,6 @@ public class move : MonoBehaviour
     public float bacon;
     public float speed = 10;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

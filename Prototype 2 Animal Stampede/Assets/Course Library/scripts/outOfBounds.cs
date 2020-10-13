@@ -8,13 +8,6 @@ public class outOfBounds : MonoBehaviour
     public float bottomBounds = -15f;
     ///working on a solution for error 234
     
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
