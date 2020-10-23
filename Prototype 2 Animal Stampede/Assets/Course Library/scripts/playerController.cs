@@ -20,12 +20,12 @@ public class playerController : MonoBehaviour
         //if -xRange with xRange are on this line, it loops like Pacman
         if(transform.position.x < -xRange)
         { //constrains leftward movement x @ -10
-            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         
         }
         if(transform.position.x > xRange)
         { //constrains leftward movement x @ -10
-            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         
         }
         if(Input.GetKeyDown(KeyCode.Space))

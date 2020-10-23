@@ -5,9 +5,14 @@ using UnityEngine;
 public class outOfBounds : MonoBehaviour
 {
     public float topBounds = 35f;
-    public float bottomBounds = -15f;
-    ///working on a solution for error 234
+    public float LowBounds = -20;
+    //floats item
     
+    void Start()
+       { 
+       Time.timeScale = 1;
+       }
+       
     // Update is called once per frame
     void Update()
     {
@@ -15,9 +20,11 @@ public class outOfBounds : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if(transform.position.z < bottomBounds)
+        
+        else if(transform.position.z < LowBounds)
         {
-            Destroy(gameObject);
+            Debug.Log("GAME OVER");
+            Time.timeScale = 0;
         }
     }
 }

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7355592719276665920}
   - component: {fileID: 7355592719274374178}
   - component: {fileID: 7355592719274374179}
-  - component: {fileID: 7355592719274374207}
   - component: {fileID: 4543592584394610500}
+  - component: {fileID: -7835687886571484254}
+  - component: {fileID: 290516947281032493}
   m_Layer: 0
   m_Name: Food_Sandwich_01
   m_TagString: Untagged
@@ -114,20 +115,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.58251953, y: 0.21931139, z: 0.58434105}
   m_Center: {x: -0.0071115494, y: 0.022245571, z: -0.00039863586}
---- !u!114 &7355592719274374207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7355592719274472064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d992b14f4479400b9286c5a96445c18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBounds: 35
-  bottomBounds: -15
 --- !u!114 &4543592584394610500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +129,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bacon: 0
   speed: 10
+--- !u!114 &-7835687886571484254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355592719274472064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec67db17ca7aa4c968864911bd9d8ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &290516947281032493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355592719274472064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d992b14f4479400b9286c5a96445c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 35
+  LowBounds: -20
