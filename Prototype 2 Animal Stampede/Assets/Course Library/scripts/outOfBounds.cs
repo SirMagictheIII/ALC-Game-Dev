@@ -23,6 +23,7 @@ public class outOfBounds : MonoBehaviour
         
         else if(transform.position.z < LowBounds)
         {
+            Destroy(gameObject);
             Debug.Log("GAME OVER");
             Time.timeScale = 0;
         }
