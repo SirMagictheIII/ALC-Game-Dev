@@ -28,7 +28,8 @@ public class playerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+       //spawns food 
+       if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(foodMissile, transform.position, foodMissile.transform.rotation);
         }

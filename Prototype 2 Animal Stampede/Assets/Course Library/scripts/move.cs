@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    public float bacon;
     public float speed = 10;
     
     // Update is called once per frame

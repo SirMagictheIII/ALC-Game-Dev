@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectCollision : MonoBehaviour
+public class DetectCollisions : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
