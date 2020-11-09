@@ -6,23 +6,26 @@ public class spawning : MonoBehaviour
 {
     public GameObject obstaclePrefab;
     private Vector3 spawnPos = new Vector3(30, 0 ,-2);
-    private float startDelay = 2.0f;
-    private float repeatDelay = 10.0f;
+    private float startDelay = 2f;
+    private float repeatDelay = 10f;
+    
+    private PlayCont playContS;
     
     // (x, y, z)
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("SpawnObstacle", startDelay, repeatDelay);
         
+        playContS = GameObject.Find("Player").GetComponent<PlayCont>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        InvokeRepeating("SpawnObstacle", startDelay, repeatDelay);
-    }
+    // Uses new idea and spawns
     void SpawnObstacle()
     {
-    Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+    if(playContS.gameOver == false)
+        {
+        Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+        }
     }
 }
