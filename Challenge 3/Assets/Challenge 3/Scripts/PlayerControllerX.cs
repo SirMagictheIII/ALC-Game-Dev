@@ -17,6 +17,7 @@ public class PlayerControllerX : MonoBehaviour
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
+    public AudioClip bounceSound;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class PlayerControllerX : MonoBehaviour
     // Update is called once per frame added bool to test if balloon is high enough
     void Update()
     {
+        //balloon could float up as long as possible. Stops balloon from going to high. Makes it so player cannot press space bar above y 17
         if (transform.position.y > 17)
         {
             isLowEnough = false;
@@ -70,10 +72,11 @@ public class PlayerControllerX : MonoBehaviour
             Destroy(other.gameObject);
 
         }
-
+        //balloon will bounce when hitting ground and play a sound
         if (other.gameObject.CompareTag("Ground"))
         {
             playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            playerAudio.PlayOneShot(bounceSound, 1.0f);
         }
     }
 
