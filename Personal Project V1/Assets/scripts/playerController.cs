@@ -8,6 +8,7 @@ public class playerController : MonoBehaviour
 
     public float horizontalInput;
     public float forwardInput;
+    public GameObject swordSwing;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +26,10 @@ public class playerController : MonoBehaviour
        
 
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(swordSwing, transform.position, swordSwing.transform.rotation);
+        }
     }
 }
