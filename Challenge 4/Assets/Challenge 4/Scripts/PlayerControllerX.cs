@@ -29,15 +29,12 @@ public class PlayerControllerX : MonoBehaviour
 
         // Set powerup indicator position to beneath player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.6f, 0);
+        boost.Stop();
 
         if (Input.GetKey(KeyCode.Space))
         {
             playerRb.AddFroce(focalPointTransform.forward * verticalInput * boostSpeed * Time.deltaTime);
             boost.Play();
-        }
-        else if()
-        {
-            boost.Stop();
         }
     }
 
