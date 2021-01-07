@@ -9,12 +9,17 @@ public class GameManagerX : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
+    
+    public TextMeshProUGUI countDownText;
+    
     public GameObject titleScreen;
     public Button restartButton; 
 
     public List<GameObject> targetPrefabs;
 
     private int score;
+    private int tele;
+    public int sec;
     private float spawnRate = 1.5f;
     public bool isGameActive;
 
@@ -26,12 +31,16 @@ public class GameManagerX : MonoBehaviour
     public void StartGame(int difficulty)
     {
         spawnRate /= difficulty;
-        
         isGameActive = true;
         StartCoroutine(SpawnTarget());
         score = 0;
         UpdateScore(0);
         titleScreen.SetActive(false);
+        countDownText.gameObject.SetActive(true);
+        if(isGameActive)
+        {
+        CountDown(60);
+        }
     }
 
     // While game is active spawn a random target
@@ -44,7 +53,7 @@ public class GameManagerX : MonoBehaviour
 
             if (isGameActive)
             {
-                Instantiate(targetPrefabs[index], RandomSpawnPosition(), targetPrefabs[index].transform.rotation);
+            Instantiate(targetPrefabs[index], RandomSpawnPosition(), targetPrefabs[index].transform.rotation);
             }
             
         }
@@ -60,6 +69,8 @@ public class GameManagerX : MonoBehaviour
         return spawnPosition;
 
     }
+    
+    
 
     // Generates random square index from 0 to 3, which determines which square the target will appear in
     int RandomSquareIndex()
@@ -71,7 +82,15 @@ public class GameManagerX : MonoBehaviour
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        scoreText.text = "Score";
+        scoreText.text = "Score:" + score;
+    }
+    
+    public void CountDown(int tele)
+    {
+    tele = 1;
+    sec = 61;
+    sec = sec - tele;
+    countDownText.text = "Time:" + sec;
     }
 
     // Stop game, bring up game over text and restart button
